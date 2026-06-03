@@ -1,5 +1,190 @@
-<!DOCTYPE html>
-<html>
-<head><meta charset="utf-8"><title>Test Domain</title></head>
-<body><h1>Say My Name !  sins 1992</h1></body>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="MGPRONA Lab — survey tools, MSI/XML experiments, and practical automation.">
+  <title>MGPRONA Lab</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #0d1117;
+      --panel: rgba(255,255,255,.055);
+      --line: rgba(255,255,255,.12);
+      --text: #f4efe5;
+      --muted: #a8b0bd;
+      --accent: #f2c14e;
+      --accent-2: #7dd3fc;
+    }
+    * { box-sizing: border-box; }
+    html { min-height: 100%; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.55;
+      color: var(--text);
+      background:
+        radial-gradient(circle at 18% 12%, rgba(242,193,78,.18), transparent 27rem),
+        radial-gradient(circle at 86% 78%, rgba(125,211,252,.16), transparent 25rem),
+        linear-gradient(135deg, #0d1117 0%, #111827 55%, #080b10 100%);
+      display: grid;
+      place-items: center;
+      padding: 28px;
+    }
+    main {
+      width: min(920px, 100%);
+      border: 1px solid var(--line);
+      border-radius: 28px;
+      background: linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.035));
+      box-shadow: 0 24px 80px rgba(0,0,0,.35);
+      padding: clamp(28px, 6vw, 64px);
+      backdrop-filter: blur(10px);
+    }
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin: 0 0 20px;
+      color: var(--muted);
+      font-size: 14px;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+    }
+    .dot {
+      width: 9px;
+      height: 9px;
+      border-radius: 999px;
+      background: #40d17f;
+      box-shadow: 0 0 18px #40d17f;
+    }
+    h1 {
+      margin: 0;
+      font-size: clamp(42px, 10vw, 104px);
+      line-height: .9;
+      letter-spacing: -.08em;
+    }
+    .tagline {
+      max-width: 720px;
+      margin: 24px 0 0;
+      color: var(--muted);
+      font-size: clamp(18px, 3vw, 25px);
+    }
+    .tagline strong { color: var(--text); font-weight: 650; }
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin: 34px 0 0;
+    }
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 44px;
+      padding: 0 18px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: var(--panel);
+      transition: transform .18s ease, border-color .18s ease, background .18s ease;
+    }
+    .button.primary {
+      color: #16120a;
+      border-color: transparent;
+      background: var(--accent);
+      font-weight: 700;
+    }
+    .button:hover {
+      transform: translateY(-2px);
+      border-color: rgba(255,255,255,.28);
+      background: rgba(255,255,255,.09);
+    }
+    .button.primary:hover { background: #ffd76d; }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      margin-top: 44px;
+    }
+    .card {
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      background: rgba(255,255,255,.045);
+      padding: 18px;
+    }
+    .card b {
+      display: block;
+      margin-bottom: 8px;
+      color: var(--accent-2);
+      font-size: 14px;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+    .card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 15px;
+    }
+    footer {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 12px;
+      margin-top: 44px;
+      padding-top: 20px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 14px;
+    }
+    @media (max-width: 720px) {
+      body { padding: 16px; }
+      main { border-radius: 22px; }
+      .grid { grid-template-columns: 1fr; }
+      .button { width: 100%; }
+      footer { display: block; }
+      footer span { display: block; margin-top: 8px; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <p class="eyebrow"><span class="dot" aria-hidden="true"></span>Online workshop</p>
+    <h1>MGPRONA<br>Lab</h1>
+    <p class="tagline">
+      <strong>Surveyor • Programmer • Tools Builder.</strong><br>
+      A small, fast web space for land survey tools, MSI/XML experiments,
+      and practical automation.
+    </p>
+
+    <nav class="actions" aria-label="Primary links">
+      <a class="button primary" href="https://github.com/mgprona">GitHub</a>
+      <a class="button" href="https://github.com/mgprona/SuperMSI">SuperMSI</a>
+      <a class="button" href="https://github.com/mgprona/MSI_XML_Collector">MSI XML Collector</a>
+    </nav>
+
+    <section class="grid" aria-label="Focus areas">
+      <article class="card">
+        <b>Survey</b>
+        <p>Practical tools for Thai land survey workflows and boundary data.</p>
+      </article>
+      <article class="card">
+        <b>MSI / XML</b>
+        <p>Experiments for parsing, collecting, and validating survey files.</p>
+      </article>
+      <article class="card">
+        <b>AI Tools</b>
+        <p>Lightweight agent workflows for coding, testing, and research.</p>
+      </article>
+    </section>
+
+    <footer>
+      <span>Say my name — since 1992.</span>
+      <span>Plain HTML. No framework. Fast by default.</span>
+    </footer>
+  </main>
+</body>
 </html>
