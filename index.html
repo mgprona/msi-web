@@ -3,16 +3,16 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="A quiet corner of the web.">
-  <title>Still Online</title>
+  <meta name="description" content="Coming soon.">
+  <title>Coming Soon</title>
   <style>
     :root {
       color-scheme: dark;
-      --text: #f5efe2;
-      --muted: #aeb7c4;
-      --line: rgba(255,255,255,.14);
-      --glow: #f3c969;
-      --blue: #83d8ff;
+      --bg: #0b0f14;
+      --text: #f3efe7;
+      --muted: #9aa6b2;
+      --line: rgba(243,239,231,.16);
+      --accent: #f0c66d;
     }
     * { box-sizing: border-box; }
     body {
@@ -24,106 +24,74 @@
       font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       color: var(--text);
       background:
-        radial-gradient(circle at 20% 18%, rgba(243,201,105,.20), transparent 24rem),
-        radial-gradient(circle at 80% 72%, rgba(131,216,255,.16), transparent 26rem),
-        linear-gradient(135deg, #090d14, #111827 55%, #07090d);
+        radial-gradient(circle at 50% -20%, rgba(240,198,109,.18), transparent 34rem),
+        linear-gradient(180deg, #121820 0%, var(--bg) 62%);
     }
     main {
-      width: min(820px, 100%);
-      padding: clamp(30px, 7vw, 72px);
+      width: min(720px, 100%);
+      padding: clamp(34px, 8vw, 72px);
       border: 1px solid var(--line);
-      border-radius: 30px;
-      background: linear-gradient(180deg, rgba(255,255,255,.075), rgba(255,255,255,.032));
-      box-shadow: 0 28px 90px rgba(0,0,0,.38);
+      border-radius: 28px;
+      background: rgba(255,255,255,.035);
+      box-shadow: 0 24px 80px rgba(0,0,0,.32);
+      text-align: center;
     }
     .status {
       display: inline-flex;
       align-items: center;
       gap: 10px;
-      margin-bottom: 28px;
+      margin-bottom: 30px;
       color: var(--muted);
       font-size: 13px;
-      letter-spacing: .18em;
+      letter-spacing: .16em;
       text-transform: uppercase;
     }
     .dot {
-      width: 9px;
-      height: 9px;
+      width: 8px;
+      height: 8px;
       border-radius: 50%;
-      background: #43d37c;
-      box-shadow: 0 0 18px #43d37c;
+      background: #47d987;
+      box-shadow: 0 0 18px #47d987;
     }
     h1 {
       margin: 0;
-      max-width: 10ch;
-      font-size: clamp(48px, 11vw, 116px);
-      line-height: .88;
-      letter-spacing: -.08em;
+      font-size: clamp(44px, 10vw, 88px);
+      line-height: .95;
+      letter-spacing: -.06em;
     }
     p {
-      max-width: 620px;
-      margin: 28px 0 0;
+      max-width: 560px;
+      margin: 26px auto 0;
       color: var(--muted);
-      font-size: clamp(18px, 2.8vw, 24px);
-      line-height: 1.55;
+      font-size: clamp(18px, 3vw, 22px);
+      line-height: 1.6;
     }
-    .mark {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 12px;
-      margin-top: 44px;
+    .line {
+      width: 72px;
+      height: 2px;
+      margin: 36px auto;
+      border-radius: 999px;
+      background: var(--accent);
+      box-shadow: 0 0 24px rgba(240,198,109,.42);
     }
-    .mark span {
-      min-height: 86px;
-      border: 1px solid var(--line);
-      border-radius: 22px;
-      background:
-        linear-gradient(135deg, rgba(255,255,255,.08), rgba(255,255,255,.02));
-      transition: transform .18s ease, border-color .18s ease;
-    }
-    .mark span:nth-child(1) { box-shadow: inset 0 0 0 1px rgba(243,201,105,.16); }
-    .mark span:nth-child(2) { transform: translateY(18px); box-shadow: inset 0 0 0 1px rgba(131,216,255,.16); }
-    .mark span:nth-child(3) { box-shadow: inset 0 0 0 1px rgba(255,255,255,.10); }
-    .mark span:hover {
-      transform: translateY(-4px);
-      border-color: rgba(255,255,255,.30);
-    }
-    .mark span:nth-child(2):hover { transform: translateY(10px); }
     footer {
-      display: flex;
-      justify-content: space-between;
-      gap: 14px;
-      margin-top: 54px;
-      padding-top: 20px;
-      border-top: 1px solid var(--line);
       color: var(--muted);
       font-size: 14px;
-    }
-    @media (max-width: 680px) {
-      body { padding: 16px; }
-      main { border-radius: 24px; }
-      .mark { grid-template-columns: 1fr; }
-      .mark span, .mark span:nth-child(2) { min-height: 58px; transform: none; }
-      footer { display: block; }
-      footer span { display: block; margin-top: 8px; }
+      letter-spacing: .08em;
+      text-transform: uppercase;
     }
   </style>
 </head>
 <body>
   <main>
-    <div class="status"><span class="dot" aria-hidden="true"></span>Signal found</div>
-    <h1>Still<br>Online.</h1>
+    <div class="status"><span class="dot" aria-hidden="true"></span>Online since 1992</div>
+    <h1>Coming<br>Soon.</h1>
     <p>
-      A quiet corner of the web. Nothing to announce, nothing to sell —
-      just a small page breathing in the dark.
+      This domain is being built quietly. A simple place for useful tools,
+      clean experiments, and things worth keeping online.
     </p>
-    <div class="mark" aria-hidden="true">
-      <span></span><span></span><span></span>
-    </div>
-    <footer>
-      <span>Say my name — since 1992.</span>
-      <span>Plain HTML. Fast by default.</span>
-    </footer>
+    <div class="line" aria-hidden="true"></div>
+    <footer>No noise. No rush. Just building.</footer>
   </main>
 </body>
 </html>
