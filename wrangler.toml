@@ -1,0 +1,7 @@
+name = "msi-web-counter"
+main = "worker.js"
+compatibility_date = "2026-06-07"
+
+[[kv_namespaces]]
+binding = "VISIT_COUNTER"
+id = "6b1f3736fb0d4061bd2e7263b2506f61"

@@ -80,6 +80,17 @@
       letter-spacing: .08em;
       text-transform: uppercase;
     }
+    .visitor-counter {
+      margin-top: 18px;
+      color: rgba(154,166,178,.82);
+      font-size: 12px;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+    .visitor-count {
+      color: var(--accent);
+      font-variant-numeric: tabular-nums;
+    }
   </style>
 </head>
 <body>
@@ -92,6 +103,25 @@
     </p>
     <div class="line" aria-hidden="true"></div>
     <footer>No noise. No rush. Just building.</footer>
+    <div class="visitor-counter" aria-live="polite">
+      Views: <span class="visitor-count" id="visitor-count">...</span>
+    </div>
   </main>
+  <script>
+    const counterEndpoint = "https://msi-web-counter.mgprona.workers.dev/visit";
+    const countElement = document.getElementById("visitor-count");
+
+    fetch(counterEndpoint, { method: "POST" })
+      .then((response) => {
+        if (!response.ok) throw new Error("Counter request failed");
+        return response.json();
+      })
+      .then((data) => {
+        countElement.textContent = Number(data.count).toLocaleString("en-US");
+      })
+      .catch(() => {
+        countElement.textContent = "offline";
+      });
+  </script>
 </body>
 </html>
